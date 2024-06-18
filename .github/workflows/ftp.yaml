@@ -11,10 +11,10 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: Checkout repository
-      users: actions/checkout@master
-      
+      uses: actions/checkout@master
+
     - name: FTP Deploy
-      users: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
