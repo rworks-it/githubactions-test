@@ -12,13 +12,13 @@ jobs:
   steps:
     - uses: actions/checkout@master
     - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public/
-          server-dir: /home/mwzdqwaa/domains/mfiles.rworks.biz/public_html/
-          args: --delete
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: public/
+        server-dir: /home/mwzdqwaa/domains/mfiles.rworks.biz/public_html/
+        args: --delete
 
 
 # name: ftp upload
