@@ -10,8 +10,11 @@ jobs:
   name: FTP-Deploy-Action
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@master
-    - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
