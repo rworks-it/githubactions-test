@@ -12,6 +12,13 @@ jobs:
   steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Debug environment variables
+      run: |
+        echo "FTP_SERVER: ${{ secrets.FTP_SERVER }}"
+        echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }}"
+        echo "LOCAL_DIR: public/"
+        echo "REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}"
       
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
