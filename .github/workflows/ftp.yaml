@@ -22,5 +22,4 @@ jobs:
         protocol: ftps
         local-dir: public/
         server-dir: ${{ secrets.FTP_REMOTE_DIR }}
-        git-ftp-args: --verbose --log-stderr
         args: --delete
