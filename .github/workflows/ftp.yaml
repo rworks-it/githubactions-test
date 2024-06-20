@@ -20,7 +20,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        port: 990
         local-dir: public/
         server-dir: ${{ secrets.FTP_REMOTE_DIR }}
         args: --delete
